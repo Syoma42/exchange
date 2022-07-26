@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="form">
+        <div class="column">
+            <span>I have</span>
+            <select [(ngModel)]="sellCurrency" (change)="clearForm()">
+                <option *ngFor="let currency of currencies" value="{{ currency }}">{{ currency }}</option>
+            </select>
+            <input type="number" [(ngModel)]="sellCurrencyAmount" (change)="exchange()">
+        </div>
+
+        <div class="column">
+            <span>I get</span>
+            <select [(ngModel)]="buyCurrency" (change)="clearForm()">
+                <option *ngFor="let currency of currencies" value="{{ currency }}">{{ currency }}</option>
+            </select>
+            <input type="number" [(ngModel)]="buyCurrencyAmount" (change)="reverseExchange()">
+        </div>
+    </div>
+</div>

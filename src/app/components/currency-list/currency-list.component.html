@@ -1,0 +1,7 @@
+<div class="list" *ngIf="apiService.rateList.length > 0">
+    <div class="item" *ngFor="let item of apiService.rateList">
+        <span class="name">{{ item.ccy }}</span>
+        <span class="price">{{ item.buy | roundUp }}</span>/
+        <span class="price">{{ item.sale | roundUp }}</span>
+    </div>
+</div>

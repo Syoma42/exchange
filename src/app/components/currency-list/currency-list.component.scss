@@ -1,0 +1,15 @@
+.list {
+  display: flex;
+  background-color: limegreen;
+  padding: 15px;
+
+  .item {
+    margin-right: 15px;
+    font-size: 16px;
+
+    .name,
+    .price {
+      margin-right: 5px;
+    }
+  }
+}
